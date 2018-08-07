@@ -31,5 +31,16 @@
 
 \maketitle
 
+\section{Hack: Disable the 3-minute auto-shutdown timeout}
+
+A simple modification is replacing the tilt switch in the shock unit by a slow (0.01 Hz to 10 Hz) Oscillator to disable the 3-minute auto-shutdown timeout.
+
+\begin{figure}
+	\centerline{\includegraphics[scale=1.0]{auto-shutdown-timeout-hack.jpeg}}
+	\caption{\label{auto-shutdown-timeout-hack}Oscillator for hack to disable auto-shutdown timeout}
+\end{figure}
+
+The oscillator can be built from just three small components: A 74LVC1G14 inverting Schmitt-trigger buffer, a 1 µF capacitor and a 100 k\si{\ohm} resistor (see Figure~\ref{auto-shutdown-timeout-hack}).
+
 \end{document}
 
