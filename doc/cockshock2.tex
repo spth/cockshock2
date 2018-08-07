@@ -31,6 +31,31 @@
 
 \maketitle
 
+\section{Introduction}
+
+cockshock2 is an effort to reverse-engineer, document and hack a dog shock collar for use as an electrical torture device / sex toy.
+
+It was inspired by the Master Series Cock Shock sex toy and it shortcomings (like the dog shock collars, it has an annoying auto shutdown timeout, but it also lacks adjustable intensity and is badly documented). There is another project on fixing the issues in the Cock Shock (https://github.com/spth/cockshock).
+
+This project is based on a common dog-shock collar with adjustable intensity. The collar part is replaced by a shorter strip that better fits male genitals, the auto-shutdown timeout is disabled by replacing the tilt switch by a simple oscillator.
+
+A long-term goal would be to replace the firmware with a free alternative.
+
+\section{The Remote Control}
+
+TODO: Description.
+
+\begin{figure}
+	\centerline{\includegraphics[scale=0.1]{remotecontrol-top.jpeg}}
+	\caption{\label{remotepcb}Disassembled remote control}
+\end{figure}
+
+TODO: Schematics.
+
+\section{The Shock Unit}
+
+TODO: Description, schematics, document protoccol.
+
 \section{Hack: Disable the 3-minute auto-shutdown timeout}
 
 A simple modification is replacing the tilt switch in the shock unit by a slow (0.01 Hz to 10 Hz) Oscillator to disable the 3-minute auto-shutdown timeout.
@@ -40,7 +65,7 @@ A simple modification is replacing the tilt switch in the shock unit by a slow (
 	\caption{\label{auto-shutdown-timeout-hack}Oscillator for hack to disable auto-shutdown timeout}
 \end{figure}
 
-The oscillator can be built from just three small components: A 74LVC1G14 inverting Schmitt-trigger buffer, a 1 µF capacitor and a 100 k\si{\ohm} resistor (see Figure~\ref{auto-shutdown-timeout-hack}).
+The oscillator can be built from just three small components: A 74LVC1G14 inverting Schmitt-trigger buffer, a 1 µF capacitor and a 100 k\si{\ohm} resistor (see Figure~\ref{auto-shutdown-timeout-hack}). Obviously, this hack increases power consumption; typical NiMH batteries will be drained in about two days, so after applying this hack the batteries should always be taken out of the shock unit when the shock unit is not used for a substantial time.
 
 \end{document}
 
