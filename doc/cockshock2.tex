@@ -58,14 +58,32 @@ TODO: Description, schematics, document protoccol.
 
 \section{Hack: Disable the 3-minute auto-shutdown timeout}
 
-A simple modification is replacing the tilt switch in the shock unit by a slow (0.01 Hz to 10 Hz) Oscillator to disable the 3-minute auto-shutdown timeout.
+A simple modification is replacing the tilt switch in the shock unit by a slow (0.01 Hz to 10 Hz) Oscillator to disable the 4-minute auto-shutdown timeout. Obviously, this hack increases power consumption; typical NiMH batteries will be drained in about two days, so after applying this hack the batteries should always be taken out of the shock unit when the shock unit is not used for a substantial time.
 
 \begin{figure}
 	\centerline{\includegraphics[scale=1.0]{auto-shutdown-timeout-hack.jpeg}}
-	\caption{\label{auto-shutdown-timeout-hack}Oscillator for hack to disable auto-shutdown timeout}
+	\caption{\label{auto-shutdown-timeout-hack}Oscillator for the hack to disable the auto-shutdown timeout}
 \end{figure}
 
-The oscillator can be built from just three small components: A 74LVC1G14 inverting Schmitt-trigger buffer, a 1 µF capacitor and a 100 k\si{\ohm} resistor (see Figure~\ref{auto-shutdown-timeout-hack}). Obviously, this hack increases power consumption; typical NiMH batteries will be drained in about two days, so after applying this hack the batteries should always be taken out of the shock unit when the shock unit is not used for a substantial time.
+\begin{figure}
+	\centerline{\includegraphics[scale=0.1]{auto-shutdown-timeout-hacks.jpeg}}
+	\caption{\label{auto-shutdown-timeout-hacks}Two assembled oscillators for the hack to disable the auto-shutdown timeout}
+\end{figure}
+
+The oscillator can be built from just three small components: A 74LVC1G14 inverting Schmitt-trigger buffer, a 1 µF capacitor and a 100 k\si{\ohm} resistor (see Figure~\ref{auto-shutdown-timeout-hack}). To increase reliability a 0.1 µF capacitor is used to stabilize the power supply. Using wired parts for the passive components and SOT-23-6 breakout board results in a hand-solderable, small oscillator (see Figure~\ref{auto-shutdown-timeout-hacks}) that fits into the shock unit.
+
+\begin{figure}
+	\centerline{\includegraphics[scale=0.15]{auto-shutdown-timeout-hack-first-test.jpeg}}
+	\caption{\label{auto-shutdown-timeout-hack-first-test}Testing the hack to disable the auto-shutdown timeout}
+\end{figure}
+
+\begin{figure}
+	\centerline{\includegraphics[scale=0.1]{auto-shutdown-timeout-hack-supply.jpeg}}
+	\caption{\label{auto-shutdown-timeout-hack-supply}Supplying power to the oscillator}
+\end{figure}
+
+The tilt switch should be removed carefully, to avoid breaking narrow traces on the PCB.
+After then testing the oscillator (see Figure~\ref{auto-shutdown-timeout-hack-first-test}), the oscillator can be soldered in the place where the tilt switch was (some isolating tape on the oscillator can help prevent short-circuits); power is supplied via a wire fromt he other side of the PCB (see Figure~\ref{auto-shutdown-timeout-hack-supply}).
 
 \end{document}
 

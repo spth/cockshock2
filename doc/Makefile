@@ -1,5 +1,5 @@
 XELATEXARGS = -file-line-error -halt-on-error
-IMAGES = remotecontrol-top.jpeg auto-shutdown-timeout-hack.jpeg
+IMAGES = remotecontrol-top.jpeg auto-shutdown-timeout-hack.jpeg auto-shutdown-timeout-hacks.jpeg auto-shutdown-timeout-hack-first-test.jpeg auto-shutdown-timeout-hack-supply.jpeg
 
 .PHONY: clean all
 
