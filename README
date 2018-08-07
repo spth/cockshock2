@@ -1,0 +1,8 @@
+This is an effort to reverse-engineer, document and hack a dog shock collar for use as an electrical torture device / sex toy.
+
+It was inspired by the Master Series Cock Shock sex toy and it shortcomings (like the dog shock collars, it has an annoying auto shutdown timeout, but it also lacks adjustable intensity). There is another project on fixing the issues in the Cock Shock (https://github.com/spth/cockshock).
+
+This project is based on a dog-shock collar with adjustable intensity. The collar part is replaced by a shorter strip that better fits male genitals, the auto-shutdown timeout is disabled by replacing the tilt switch by a simple oscillator.
+
+A long-term goal could be to replace the firmware with a free alternative.
+
