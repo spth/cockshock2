@@ -54,7 +54,9 @@ TODO: Schematics.
 
 \section{The Shock Unit}
 
-TODO: Description, schematics, document protoccol.
+The shock unit consits of a plastic case containing two AAA batteries and a single PCB with the electronics (433.825 MHz receiver, transformer, etc). Two electrodes are protruding from it. While most connections are soldered, the connection between teh wires and electrodes is not. It is simply a wire making contact with the thread, that relatively easily breaks, or makes unreliable contact, especially after repeaded dis- and reassembly. There is a small vibrator and a tilt switch. The latter is used to power down the unit when no movement is detected for about 4 minutes to conserve power.
+
+TODO: Schematics, document protoccol.
 
 \section{Hack: Disable the 3-minute auto-shutdown timeout}
 
@@ -83,7 +85,7 @@ The oscillator can be built from just three small components: A 74LVC1G14 invert
 \end{figure}
 
 The tilt switch should be removed carefully, to avoid breaking narrow traces on the PCB.
-After then testing the oscillator (see Figure~\ref{auto-shutdown-timeout-hack-first-test}), the oscillator can be soldered in the place where the tilt switch was (some isolating tape on the oscillator can help prevent short-circuits); power is supplied via a wire fromt he other side of the PCB (see Figure~\ref{auto-shutdown-timeout-hack-supply}).
+After then testing the oscillator (see Figure~\ref{auto-shutdown-timeout-hack-first-test}), the oscillator can be soldered in the place where the tilt switch was (some isolating tape on the oscillator can help prevent short-circuits); power is supplied via a wire from the other side of the PCB (see Figure~\ref{auto-shutdown-timeout-hack-supply}).
 
 \end{document}
 
